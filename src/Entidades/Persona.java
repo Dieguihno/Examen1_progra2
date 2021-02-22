@@ -1,14 +1,56 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+primer examen parcial programacion 2
+Estudiantes: Diego Monge Villegas y  Alonso Alvarado Mora
+profesor: Andres Ulloa Brenes
  */
 package Entidades;
 
-/**
- *
- * @author diego
- */
+
 public class Persona {
+    
+    private String nombre;
+    private String apellidos;
+
+    public Persona(String nombre, String apellidos) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+    }
+
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    /**
+     * @return the apellidos
+     */
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    /**
+     * @param apellidos the apellidos to set
+     */
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    @Override
+    public String toString() {
+        return "Nombre: " + nombre + " " + apellidos;
+    }
+    
+    
+    
+    
     
 }
