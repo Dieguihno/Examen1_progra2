@@ -10,9 +10,8 @@ public class Factura {
     private double total; //total de la compra
     private Articulos articulo;
 
-    public Factura(double total, Articulos articulos) {
-
-        this.total = total;
+    public Factura(Articulos articulos) {
+        
         this.articulo = articulos;
     }
 
@@ -34,8 +33,10 @@ public class Factura {
 
     @Override
     public String toString() {
-        return "Factura" + "\n " + articulo + " \n total=" + total ;
+        return "Factura" + "\n " + articulo ;
     }
+    
+    
     
     
 

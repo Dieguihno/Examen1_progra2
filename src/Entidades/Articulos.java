@@ -140,7 +140,9 @@ public class Articulos {
                 + "\n IVA: " + getImpuestoValorAgregado() + " subtotal con IVA: " + (getImpuestoValorAgregado() + getSubtotal())
                 + "\n costo envio: " + getEnvio()
                 + "\n Total articulo: " + getTotalArticulo();
+       
 
     }
-
+    
+   
 }
