@@ -8,8 +8,7 @@ package primerparcial_mongevillegas_alvaradomora;
 import Entidades.*;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
-import java.util.Iterator;
+import java.util.Date;
 
 public class CarritoCompras {
 
@@ -17,26 +16,36 @@ public class CarritoCompras {
 
         Cliente cliente1 = new Cliente("San Jose, catedral", "88996788", "bronce", "Julian", "Quiros Astorga");
         Empleado empleado1 = new Empleado("0143", "vendedor", "Christian", "Salazar campos");
-        Articulos articulo1 = new Articulos(25000, "tarjeta madre", "Aorus", 2);
-        Articulos articulo2 = new Articulos(30000, "monitor", "LG", 1);
+        Articulo articulo1 = new Articulo(25000, "Tarjeta madre", "Acer", 2);
+        Articulo articulo2 = new Articulo(30000, "monitor", "LG", 1);
 
-        ArrayList<Articulos> facturas = new ArrayList<>();
+        ArrayList<Articulo> facturas = new ArrayList<>();
         facturas.add(articulo1);
         facturas.add(articulo2);
 
-        Collections.sort(facturas, (Articulos p1, Articulos p2) -> new Double((p1.getValorUnitario())).compareTo((p2.getValorUnitario())) // Aqui esta el truco, ahora comparamos p2 con p1 y no al reves como antes
+        Collections.sort(facturas, (Articulo p1, Articulo p2) -> {
+            return new Double((p1.getValorUnitario())).compareTo((p2.getValorUnitario()));
+        }
         );
 
-        System.out.println(cliente1.toString());
-        System.out.println(empleado1.toString());
-        System.out.println(facturas.toString());
+        double montoTotal = 0;
 
-        /*
-        falta: 
-        que de la suma total de todos los articulos con impuestos y todo (en el main)
+        for (Articulo factura : facturas) {
+            montoTotal = montoTotal + (factura.getTotalArticulo());
+
+        }
+        
+        Date fecha = new Date();
+        Factura factura1 = new Factura(fecha, empleado1, cliente1, facturas);
+        System.out.println(factura1.toString());
+        
+               
+
+       System.out.println("\nMonto total de la compra: \n"+montoTotal+ " colones" + "\nimpuestos y envio incluidos");
         
         
-         */
+
+       
     }
 
 }

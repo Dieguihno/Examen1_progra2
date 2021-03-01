@@ -52,7 +52,8 @@ public class Empleado extends Persona {
 
     @Override
     public String toString() {
-        return "Empleado: " + this.getNombre() + " "+ this.getApellidos() + "\n numeroEmpleado: " + numeroEmpleado + ", puesto=" + puesto;
+        return "Empleado: " + this.getNombre() + " "+ this.getApellidos() + "\nnumeroEmpleado: " + numeroEmpleado + ", puesto: " + puesto +
+                "\n____________________________________";
     }
     
     

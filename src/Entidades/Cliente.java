@@ -64,7 +64,8 @@ public class Cliente extends Persona{
 
     @Override
     public String toString() {
-        return "Informacion Cliente: " + this.getNombre() + " " + this.getApellidos() + " \n direccion: " + direccion + "\n telefono: " + telefono + ", categoria=" + categoria ;
+        return "Informacion Cliente: " + this.getNombre() + " " + this.getApellidos() + " \n direccion: " + direccion + "\n telefono: " + telefono + ", categoria=" + categoria +
+                "\n____________________________________";
     }
     
 }

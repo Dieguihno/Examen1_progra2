@@ -1,43 +1,76 @@
 /*
-primer examen parcial programacion 2
-Estudiantes: Diego Monge Villegas y  Alonso Alvarado Mora
-profesor: Andres Ulloa Brenes
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Entidades;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 public class Factura {
 
-    private double total; //total de la compra
-    private Articulos articulo;
+    private Date fecha;
+    private Empleado empleado;
+    private Cliente cliente;
+    private ArrayList<Articulo> lineaFactura;
+    private double montoTotal;
 
-    public Factura(Articulos articulos) {
-        
-        this.articulo = articulos;
+    public Factura(Date fecha, Empleado empleado, Cliente cliente, ArrayList<Articulo> articulo) {
+        this.fecha = fecha;
+        this.empleado = empleado;
+        this.cliente = cliente;
+        this.lineaFactura = articulo;
+
     }
 
-    public double getTotal() {
-        return total;
+    public Factura() {
+
     }
 
-    public void setTotal(double total) {
-        this.total = this.total + total;
+    public ArrayList<Articulo> getLineaFactura() {
+        return lineaFactura;
     }
 
-    public Articulos getArticulo() {
-        return articulo;
+    public void setLineaFactura(ArrayList<Articulo> lineaFactura) {
+        this.lineaFactura = lineaFactura;
     }
 
-    public void setArticulo(Articulos articulo) {
-        this.articulo = articulo;
+    public double getMontoTotal() {
+        return montoTotal;
+    }
+
+    public void setMontoTotal(double montoTotal) {
+        this.montoTotal = montoTotal;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public Empleado getEmpleado() {
+        return empleado;
+    }
+
+    public void setEmpleado(Empleado empleado) {
+        this.empleado = empleado;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     @Override
     public String toString() {
-        return "Factura" + "\n " + articulo ;
+        return "****Carrito de compras**** " + "\n" + fecha + "\n" + empleado + "\n" + cliente + "\n" + lineaFactura;
     }
-    
-    
-    
-    
 
 }

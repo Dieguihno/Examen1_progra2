@@ -5,7 +5,7 @@ profesor: Andres Ulloa Brenes
  */
 package Entidades;
 
-public class Articulos {
+public class Articulo {
 
     private double valorUnitario;
     private String categoria; //perifericos, hardware, tarjeta madre, monitores
@@ -16,7 +16,7 @@ public class Articulos {
     private double subtotal; //valor unitario *cantidad
     private double totalArticulo; //valor total incluido envio e IVA
 
-    public Articulos(double valorUnitario, String categoria, String marca, int cantidadComprar) {
+    public Articulo(double valorUnitario, String categoria, String marca, int cantidadComprar) {
         this.valorUnitario = valorUnitario;
         this.categoria = categoria;
         this.marca = marca;
@@ -135,11 +135,11 @@ public class Articulos {
 
     @Override
     public String toString() {
-        return "Articulo (s): " + "\n categoria=" + categoria + ", marca: " + marca
-                + " valor Unitario: " + this.getValorUnitario() + ", cantidad a Comprar " + getCantidadComprar() + " subtotal: " + this.getSubtotal() + " colones"
-                + "\n IVA: " + getImpuestoValorAgregado() + " subtotal con IVA: " + (getImpuestoValorAgregado() + getSubtotal())
-                + "\n costo envio: " + getEnvio()
-                + "\n Total articulo: " + getTotalArticulo();
+        return "\n****Articulo en el carrito de compras ***** \n" + "\n Categoria: " + categoria + ", Marca: " + marca
+                + "\n Valor Unitario: " + this.getValorUnitario() + ", Cantidad a Comprar " + getCantidadComprar() + "\n subtotal: " + this.getSubtotal() + " colones"
+                + "\n IVA: " + getImpuestoValorAgregado() + " colones " + "\n subtotal con IVA: " + (getImpuestoValorAgregado() + getSubtotal()) + " colones "
+                + "\n costo envio: " + getEnvio() + " colones "
+                + "\n subtotal por la compra del (los) articulo (s): " + getTotalArticulo() + " colones ";
        
 
     }
