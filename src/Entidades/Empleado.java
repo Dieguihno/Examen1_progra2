@@ -12,7 +12,7 @@ package Entidades;
 public class Empleado extends Persona {
     
     private String numeroEmpleado;
-    private String puesto;  //vendedor administrador o gerente
+    private String puesto;  
 
     public Empleado(String numeroEmpleado, String puesto, String nombre, String apellidos) {
         super(nombre, apellidos);

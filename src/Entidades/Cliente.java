@@ -10,7 +10,7 @@ public class Cliente extends Persona{
     
     private String direccion;
     private String telefono;
-    private String categoria; //bronce, platinum o premium
+    private String categoria; 
 
     public Cliente (String direccion, String telefono, String categoria, String nombre, String apellidos) {
         super(nombre, apellidos);

@@ -8,13 +8,13 @@ package Entidades;
 public class Articulo {
 
     private double valorUnitario;
-    private String categoria; //perifericos, hardware, tarjeta madre, monitores
+    private String categoria; 
     private String marca;
     private int cantidadComprar;
-    private double envio; //30% del subtotal
-    private double impuestoValorAgregado; //20% del subtotal
-    private double subtotal; //valor unitario *cantidad
-    private double totalArticulo; //valor total incluido envio e IVA
+    private double envio; 
+    private double impuestoValorAgregado; 
+    private double subtotal; 
+    private double totalArticulo; 
 
     public Articulo(double valorUnitario, String categoria, String marca, int cantidadComprar) {
         this.valorUnitario = valorUnitario;

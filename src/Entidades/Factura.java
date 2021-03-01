@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+primer examen parcial programacion 2
+Estudiantes: Diego Monge Villegas y  Alonso Alvarado Mora
+profesor: Andres Ulloa Brenes
  */
 package Entidades;
 
@@ -14,7 +14,7 @@ public class Factura {
     private Empleado empleado;
     private Cliente cliente;
     private ArrayList<Articulo> lineaFactura;
-    private double montoTotal;
+  
 
     public Factura(Date fecha, Empleado empleado, Cliente cliente, ArrayList<Articulo> articulo) {
         this.fecha = fecha;
@@ -34,14 +34,6 @@ public class Factura {
 
     public void setLineaFactura(ArrayList<Articulo> lineaFactura) {
         this.lineaFactura = lineaFactura;
-    }
-
-    public double getMontoTotal() {
-        return montoTotal;
-    }
-
-    public void setMontoTotal(double montoTotal) {
-        this.montoTotal = montoTotal;
     }
 
     public Date getFecha() {
@@ -70,7 +62,7 @@ public class Factura {
 
     @Override
     public String toString() {
-        return "****Carrito de compras**** " + "\n" + fecha + "\n" + empleado + "\n" + cliente + "\n" + lineaFactura;
+        return "****Carrito de compras**** " + "\n" + fecha + "\n" + empleado + "\n" + cliente + "\n" + lineaFactura ;
     }
 
 }
